@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+  position: relative;
+  overflow: hidden;
+  background: rgb(11, 11, 116);
+}
+
+.wave-background {
+  position: absolute;
+  top: -1700px;
+  left: 0;
+  width: 100%;
+  height: 2500px;
+  background-image: url("../assets/wave4.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: 0;
+  filter: contrast(1.5) saturate(1.1);
+}
+
+.background-grid-1 {
+  position: absolute;
+  top: -242px;
+  left: 1100px;
+  right: 0;
+  bottom: 400px;
+  background-image: linear-gradient(90deg, transparent 24px, rgba(255, 255, 255, 0.15) 25px), linear-gradient(0deg, transparent 24px, rgba(255, 255, 255, 0.15) 25px);
+  background-size: 25px 25px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.background-grid-1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#d8d8da 3px, transparent 2px);
+  top: 90px;
+  left: 81px;
+}
+
+.background-grid-2 {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 1300px;
+  bottom: 200px;
+  background-image: linear-gradient(90deg, transparent 24px, rgba(255, 255, 255, 0.15) 25px), linear-gradient(0deg, transparent 24px, rgba(255, 255, 255, 0.15) 25px);
+  background-size: 25px 25px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.content {
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.connect-btn {
+  background-color: #FF3366;
+  color: white;
+  border: none;
+  padding: 13px 20px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.connect-btn:hover {
+  transform: translateY(-2px);
+  background-color: #ff1a53;
+}
+.connect-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .content {
+    padding: 1rem;
+  }
+  .background-grid {
+    background-size: 40px 40px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .background-grid {
+    background-size: 30px 30px;
+  }
+}/*# sourceMappingURL=design04.css.map */

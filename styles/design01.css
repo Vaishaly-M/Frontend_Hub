@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #FAFBFF;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+  max-width: 600px;
+}
+.content h1 {
+  color: #000B40;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.content p {
+  color: #575757;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+.content .btn {
+  background-color: #FF1B7B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease;
+}
+.content .btn:hover {
+  transform: translateY(-2px);
+  background-color: #d61b69;
+}
+.content .btn svg {
+  transition: transform 0.2s ease;
+}
+.content .btn:hover svg {
+  transform: translateX(4px);
+}
+
+.logos {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.logos .logo {
+  position: absolute;
+  width: 117px;
+  height: 116px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  animation: float 5s ease;
+}
+.logos .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.logos .blackberry {
+  top: -142px;
+  left: 282px;
+}
+.logos .ms {
+  top: -5px;
+  left: 146px;
+}
+.logos .checkpoint {
+  top: 131px;
+  left: 9px;
+}
+.logos .aws {
+  top: 131px;
+  left: 282px;
+}
+.logos .target {
+  top: 266px;
+  left: 149px;
+}
+.logos .infocyte {
+  top: -141px;
+  left: 1177px;
+}
+.logos .search {
+  top: 131px;
+  left: 1177px;
+}
+.logos .dataminr {
+  top: -5px;
+  left: 1041px;
+}
+.logos .cisco {
+  top: 131px;
+  left: 1313px;
+}
+.logos .snow {
+  top: 267px;
+  left: 1313px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.logo {
+  animation: floatAnimation 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    padding: 0 20px;
+  }
+  .content h1 {
+    font-size: 36px;
+  }
+  .content p {
+    font-size: 16px;
+  }
+  .logos .logo {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+  }
+}/*# sourceMappingURL=design01.css.map */
